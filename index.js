@@ -1,6 +1,10 @@
 function greet(name) {
-  // БАГ: якщо name не переданий — буде undefined
+  if (!name) {
+    return "Hello, stranger!";
+  }
   return "Hello, " + name.toUpperCase();
 }
 
-console.log(greet()); // викликається без аргументу -> помилка
+console.log(greet());        // Hello, stranger!
+console.log(greet("Ivan"));  // Hello, IVAN
+
